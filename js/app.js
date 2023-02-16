@@ -34,3 +34,35 @@ document.getElementById('generate-button').addEventListener('click', function ()
 })
 
 
+
+
+// Pin typing section 
+document.getElementById('number-parent').addEventListener('click', function (event) {
+    const numbers = event.target.innerText;
+
+    const typedNumField = document.getElementById('typed-numbers');
+    const previousTypedNum = typedNumField.value;
+
+    if (isNaN(numbers)) {
+        if (numbers == 'C') {
+            typedNumField.value = '';
+        }
+        else if (numbers == '<') {
+            const digits = previousTypedNum.split('');
+            digits.pop();
+            const remainingDigits = digits.join('');
+            typedNumField.value = remainingDigits;
+        }
+    }
+
+    else {
+        const currentTypedNum = previousTypedNum + numbers;
+        typedNumField.value = currentTypedNum;
+    }
+})
+
+
+
+// add event handler in submit button 
+
+
