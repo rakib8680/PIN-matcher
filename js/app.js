@@ -63,6 +63,19 @@ document.getElementById('number-parent').addEventListener('click', function (eve
 
 
 
+
 // add event handler in submit button 
+document.getElementById('submit-btn').addEventListener('click', function () {
+    const pinInputField = document.getElementById('pin-show-field');
+    const typedNumField = document.getElementById('typed-numbers');
 
+    if (pinInputField.value == typedNumField.value) {
+        console.log('successfull');
+    }
+    else {
+        console.log('error');
+    }
+    pinInputField.value = '';
+    typedNumField.value = '';
 
+})
