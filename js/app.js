@@ -19,8 +19,18 @@ function getValidPin() {
 
     }
     else {
-        console.log('not valid pin');
-        return generateNumber();
+        return getValidPin();
     }
 
 }
+
+
+// connect pin generator with button 
+document.getElementById('generate-button').addEventListener('click', function () {
+    const randomPin = getValidPin();
+    // display pin 
+    const pinInputField = document.getElementById('pin-show-field');
+    pinInputField.value = randomPin;
+})
+
+
