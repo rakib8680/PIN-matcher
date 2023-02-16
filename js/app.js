@@ -77,13 +77,15 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     if (pinInputField.value == typedNumField.value) {
         successPinMessage.style.display = 'block';
         errorMessage.style.display = 'none';
+        pinInputField.value = '';
     }
 
     else {
         errorMessage.style.display = 'block';
         successPinMessage.style.display = 'none';
+
     }
-    pinInputField.value = '';
+
     typedNumField.value = '';
 
 })
